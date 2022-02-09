@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 
 function App() {
+
+
+  fetch('https://api.themoviedb.org/3/movie/popular/?api_key=518d686e3eedf8978e9e68394ecf4e37&page=1')
+      .then(response => response.json())
+      .then(commits => setImg(commits.results));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+
+
+      }
     </div>
   );
 }
