@@ -3,6 +3,7 @@ import {movieService} from "../services/movie.service";
 
 const initialState = {
     movies: [],
+    movie:[],
     status: "",
     error: "",
     page:1,
@@ -22,14 +23,24 @@ export const getAllMovies = createAsyncThunk(
 
     }
 )
+export const getMovie = createAsyncThunk(
+    "moviesSlice/getMovie",
+    async (id,{rejectWithValue}) => {
+        try {
+            return await movieService.getOneMovie(id);
+        } catch (e) {
+            return rejectWithValue(e.message)
+        }
+
+
+    }
+)
 
 const movieSlice = createSlice({
         name: "movieSlice",
         initialState,
         reducers: {
-            getMovie:()=> (state,action)=>{
-                state.id =action.payload
-            }
+
 
         },
         extraReducers: {
@@ -50,5 +61,4 @@ const movieSlice = createSlice({
     }
 )
 const moviesReducer = movieSlice.reducer;
-export const {getMovie} = movieSlice.actions;
 export default moviesReducer;
