@@ -1,21 +1,30 @@
 import logo from './logo.svg';
+import {useEffect} from "react";
+
 import './App.css';
-import {useState} from "react";
+
+import {Route, Routes} from "react-router-dom";
+import {Layout} from "./pages";
+import {Movie} from "./pages/Movie/Movie";
+import {MoviesList} from"./components/index"
 
 function App() {
 
 
-  fetch('https://api.themoviedb.org/3/movie/popular/?api_key=518d686e3eedf8978e9e68394ecf4e37&page=1')
-      .then(response => response.json())
-      .then(commits => setImg(commits.results));
-  return (
-    <div className="App">
-      {
+    return (
+
+        <div className="App">
+            <Routes>
+                <Route path={"/"} element={<Layout/>}>
+                    <Route path={"/"} element={<MoviesList/>}/>
+                    <Route path={"/id=:id"} element={<Movie/>}/>
+
+                </Route>
 
 
-      }
-    </div>
-  );
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
