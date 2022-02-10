@@ -3,11 +3,11 @@ import {url} from "../../constants/url";
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {getMovie} from "../../store/movie.slice";
+import "./MovieCard.css"
 
 const MovieCard = ({movie, status}) => {
-    console.log(movie.id);
     return (
-        <div>
+        <div className={"card"}>
             {status === 'pending' && <h1>Loading....</h1>}
             <NavLink
                 to={"id="+movie.id.toString()}>

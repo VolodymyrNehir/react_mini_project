@@ -17,12 +17,26 @@ const InfoMovieComponent = () => {
     const ids = getId(location);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getMovie(ids))
+        dispatch(getMovie({id:ids}))
     }, []);
 const {movie } =useSelector(state => state["moviesReducer"]);
-    console.log(movie)
     return (
         <div>
+            <div><img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`} alt=""/></div>
+            <div className="movieInfa"><div><div>Рік випуску</div>
+                <div>Країна</div>
+                <div>Час</div>
+                <div>Для дорослих</div>
+                <div>Середні бал</div>
+                <div>Огляд</div></div>
+                <div><div>{movie.release_date}</div>
+                    {/*<div>{movie.production_countries[0].name}</div>*/}
+                    <div> {movie.runtime} хв</div>
+                    <div>{movie.adult ? 'Так' : 'Ні'}</div>
+                    <div>{movie.vote_average}</div>
+                    <div>{movie.overview}</div></div></div>
+
+
 
         </div>
     );
