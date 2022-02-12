@@ -9,7 +9,8 @@ import {Movie} from "./pages/Movie/Movie";
 import {MoviesList} from"./components/index"
 
 function App() {
-
+// const body = document.body;
+// body.style.background="black"
 
     return (
 
