@@ -1,15 +1,21 @@
 import React, {useEffect} from 'react';
 
 import "./Header.css"
-import ".../index.css";
 
 
 const Header = () => {
     const body = document.body;
-    const byTagName = window.document.body.getElementsByTagName("p");
+    const byTagName = document.getElementsByTagName("*");
     const header = document.getElementsByClassName("header");
     let switchStatus = "true";
-
+if (switchStatus ==="folse"){
+    for (let i of byTagName){
+        if (i.style.color === "black"){
+            i.style.color = "#ffffff"
+        } else {
+            i.style.color = "black"
+        }
+    }}
 
     const switchOnOff = () => {
         console.log(switchStatus)
