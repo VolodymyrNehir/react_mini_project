@@ -41,32 +41,6 @@ if (switchStatus ==="folse"){
         }
 
 
-//         if (switchStatus === "true") {
-//
-// if (switchStatus ==="true"){
-// switchStatus = "folse"
-// }else {
-//     switchStatus="true"
-// }
-//         }
-        // } else {
-        //     switchStatus = "true"
-        //     for (let i of byTagName){
-        //         i.style.color="#ffffff"
-        //     }
-        // }
-
-
-        // else {
-        //     switchStatus = "folse"
-        //
-        // }
-        // ;
-        // if (switchStatus !== "true") {
-        //
-        //
-        // }
-        //
     };
 
 
