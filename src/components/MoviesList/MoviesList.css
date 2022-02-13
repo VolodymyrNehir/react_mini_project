@@ -1,15 +1,17 @@
 
-.lists{
+.lists {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 15px;
     justify-content: center;
 
 }
-.id{
+
+.id {
     margin-top: -300px;
     position: absolute;
 }
+
 #myBtn {
     display: block;
     position: fixed;
@@ -26,10 +28,26 @@
     font-size: 18px;
 
 }
-#myBtn a{
+
+#myBtn a {
 
 }
 
 #myBtn:hover {
     background-color: #555;
+}
+
+.buttonMore {
+    background: red;
+    font-size: 22px;
+    padding: 10px;
+    width: 80%;
+    margin: 25px;
+    color: white;
+    border: solid 0;
+}
+
+.windowMore {
+    display: flex;
+    justify-content: center;
 }

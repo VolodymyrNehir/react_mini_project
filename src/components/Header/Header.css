@@ -1,5 +1,5 @@
 
-.header{
+.header {
     display: flex;
     height: 100px;
     position: fixed;
@@ -12,7 +12,7 @@
     font-size: 34px;
     font-weight: 600;
     background: #E5E5E5;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -57,4 +57,28 @@ input:focus + .slider {
 input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.buttonHome {
+    background-color: red;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    border: solid 0;
 }

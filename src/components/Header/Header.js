@@ -9,8 +9,6 @@ const Header = () => {
     let switchStatus = "true";
 
 
-
-
     const switchOnOff = () => {
         console.log(switchStatus)
         if (switchStatus === "folse") {
@@ -37,6 +35,10 @@ const Header = () => {
 
 
         <div className={"header"}>
+            <a href="/">
+                <button className={"buttonHome"}>home</button>
+            </a>
+
             <label className="switch">
                 <input onClick={() => {
                     switchOnOff()

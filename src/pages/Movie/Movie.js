@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {InfoMovieComponent, MoviesList} from "../../components";
 
 const Movie = () => {

@@ -6,10 +6,9 @@ import './App.css';
 import {Route, Routes} from "react-router-dom";
 import {Layout} from "./pages";
 import {Movie} from "./pages/Movie/Movie";
-import {MoviesList} from"./components/index"
+import {MoviesList} from "./components/index"
 
 function App() {
-
 
 
     return (
